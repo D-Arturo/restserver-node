@@ -17,14 +17,14 @@ const login = async (req, res = response) => {
             })
         }
 
-        if(!usuario.estado){
+        if (!usuario.estado) {
             return res.status(400).json({
                 mseg: 'usuario/password incorrectors - estado:false'
             })
         }
 
         const validPassword = bcryptjs.compareSync(password, usuario.password);
-        if(!validPassword){
+        if (!validPassword) {
             return res.status(400).json({
                 mseg: 'usuario/password incorrectors - password'
             })
