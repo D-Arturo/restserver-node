@@ -71,7 +71,7 @@ const usuariosDelete = async(req, res = response) => {
     // const usuario = await Usuario.findByIdAndDelete( id );
 
     const usuario = await Usuario.findByIdAndUpdate( id, { estado: false } );
-
+    await usuario.validate(); //para que muestre en la respuesta el valor ya actualizado
 
     res.json(usuario);
 }
