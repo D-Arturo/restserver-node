@@ -5,11 +5,12 @@ const { check } = require('express-validator');
 
 const { esRoleValido, emailExiste, existeUsuarioPorId } = require('../helpers/db-validators');
 
-const { validarCampos } = require('../middlewares/validar-campos');
-const { validarJwt } = require('../middlewares/validar-jwt');
-const { esAdminRole,
+const {
+  validarCampos,
+  validarJwt,
+  esAdminRole,
   tieneRole
-} = require('../middlewares/validar-roles');
+} = require('../middlewares');
 
 const {
   usuariosGet,
