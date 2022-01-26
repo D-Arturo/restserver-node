@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const dbConnection = async () => {
   try {
@@ -7,15 +7,15 @@ const dbConnection = async () => {
       useUnifiedTopology: true,
       useCreateIndex: true,
       useFindAndModify: false
-    })
+    });
 
-    console.log('Base de datos online')
+    console.log('Base de datos online');
   } catch (error) {
-    console.log(error)
-    throw new Error('Error a la hora de iniciar la base de datos')
+    console.log(error);
+    throw new Error('Error a la hora de iniciar la base de datos');
   }
-}
+};
 
 module.exports = {
   dbConnection
-}
+};
